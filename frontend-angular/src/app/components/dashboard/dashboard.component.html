@@ -1,0 +1,190 @@
+
+<header>
+    <div class="top-header">
+            <div class="top-header-container d-flex justify-content-between align-items-center">
+                <div class="header-left">
+                    <h1>Meeting Plus</h1>
+                </div>
+                <div class="header-right d-flex gap-3">
+                    <div class="create-meeting-button">
+                        <a routerlink="meeting/agenda" href="/meeting/agenda">
+                            <button class="Mom-btn"><p>Create Meeting</p></button>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex admin-box">
+                            <img class="user" src="http://demo2.ntspl.co.in/assets/images/profile.png">
+                            <span>{{employeeName}}</span>
+                            <button type="button" class="btn btn-primary logout-btn" (click)="logout()">Log Out</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    <div class="header-menu">
+        <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item">
+                  <a class="nav-link active d-flex flex-column align-items-center border-right" aria-current="page" href="#">
+                    <i class="bi bi-house-door"></i> <span class="menu-label">Home</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex flex-column align-items-center" href="#">
+                    <i class="bi bi-clock"></i> <span class="menu-label">Timeline</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+<div class="meeting-container">  
+    <div class="meeting-table">
+        <div class="table-header">
+            <h2 class="h2 mb-3">Add Employee</h2>
+        </div>
+        <div class="table-container p-3 border-1 rounded-3 mb-5">
+            <form class="add-employee-form" [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="employeeName" class="form-label">Employee<span>*</span></label>
+                            <input type="text" class="form-control" id="employeeName" formControlName="employeeName" name="employeeName" placeholder="Enter Employee" required>
+                            <div *ngIf="addEmployeeForm.get('employeeName')?.invalid && (addEmployeeForm.get('employeeName')?.dirty || addEmployeeForm.get('employeeName')?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.get('employeeName')?.errors?.['required']">Employee Name is required.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeName')?.errors?.['pattern']">Invalid characters. Only letters and spaces are allowed.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeName')?.errors?.['minlength']">Minimum 2 characters required.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeName')?.errors?.['maxlength']">Maximum 20 characters allowed.</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="employeeId" class="form-label">Employee ID<span>*</span></label>
+                            <input type="text" class="form-control" id="employeeId" formControlName="employeeId" name="employeeId" placeholder="Enter Employee ID" required>
+                            <div *ngIf="addEmployeeForm.get('employeeId')?.invalid && (addEmployeeForm.get('employeeId')?.dirty || addEmployeeForm.get('employeeId')?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.get('employeeId')?.errors?.['required']">Employee ID is required.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeId')?.errors?.['pattern']">Invalid Employee ID format.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeId')?.errors?.['minlength']">Minimum 2 characters required.</p>
+                                <p *ngIf="addEmployeeForm.get('employeeId')?.errors?.['maxlength']">Maximum 10 characters allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email<span>*</span></label>
+                            <input type="email" class="form-control" id="email" formControlName="email" name="email" placeholder="Enter Email" required>
+                            <div *ngIf="addEmployeeForm.get('email')?.invalid && (addEmployeeForm.get('email')?.dirty || addEmployeeForm.get('email')?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.get('email')?.errors?.['required']">Email is required.</p>
+                                <p *ngIf="addEmployeeForm.get('email')?.errors?.['email']">Invalid email format.</p>
+                                <p *ngIf="addEmployeeForm.get('email')?.errors?.['minlength']">Minimum 3 characters required.</p>
+                                <p *ngIf="addEmployeeForm.get('email')?.errors?.['maxlength']">Maximum 30 characters allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="designation" class="form-label">Designation <span>*</span></label>
+                            <select class="form-select" id="designation" formControlName="designation">
+                                <option value="" disabled selected>Enter Designation</option>
+                                <option value="Developer">Developer</option>
+                                <option value="Designer">Designer</option>
+                                <option value="Digital Marketer">Digital Marketer</option>
+                              </select>
+                              <div *ngIf="addEmployeeForm.controls['designation']?.invalid && (addEmployeeForm.controls['designation']?.dirty || addEmployeeForm.controls['designation']?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.controls['designation']?.errors?.['required']">Designation is required.</p>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department <span>*</span></label>
+                            <select class="form-select" id="department" formControlName="department">
+                                <option value="" disabled selected>Enter Department</option>
+                                <option value="IT">IT</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Sales">Sales</option>
+                              </select>
+                              <div *ngIf="addEmployeeForm.controls['department']?.invalid && (addEmployeeForm.controls['department']?.dirty || addEmployeeForm.controls['department']?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.controls['department']?.errors?.['required']">Department is required.</p>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="unit" class="form-label">Unit <span>*</span></label>
+                            <select class="form-select" id="unit" formControlName ="unit">
+                                <option value="" disabled selected>Enter Unit</option>
+                                <option value="East">East</option>
+                                <option value="West">West</option>
+                                <option value="North">North</option>
+                              </select>
+                              <div *ngIf="addEmployeeForm.controls['unit']?.invalid && (addEmployeeForm.controls['unit']?.dirty || addEmployeeForm.controls['unit']?.touched)" class="error-message">
+                                <p *ngIf="addEmployeeForm.controls['unit']?.errors?.['required']">Unit is required.</p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="save Mom-btn mt-3"><p>Submit</p></button>
+            </form>
+        </div>
+        <div class="table-header">
+            <h2 class="h2 mb-3">Manage Employee</h2>
+        </div>
+        
+        <div class="employee-list-container p-3 border-1 rounded-3 bg-white">
+            <div class="tbl-text-search">
+                <div class="left-tbl-text">
+                  <p>{{ showingRange }}</p>
+                </div>
+                <div class="search-box">
+                  <input type="search" placeholder="Search By Employee" [(ngModel)]="searchKey" (ngModelChange)="onSearch()" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#4F2CC8" viewBox="0 0 16 16" class="bi bi-search">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                  </svg>
+                </div>
+              </div>
+              
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Employee Name</th>
+                  <th>Employee ID</th>
+                  <th>Updated At</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let employee of employees | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                  <td>{{ employee.employeeName }}</td>
+                  <td>{{ employee.employeeId }}</td>
+                  <td>{{ employee.formattedDate }} <span>{{ employee.formattedTime }}</span></td>
+                  <td class="status">
+                    {{ employee.isActive ? 'Active' : 'Deactive' }}
+                    <mat-slide-toggle
+                      [checked]="employee.isActive"
+                      (change)="onStatusChange(employee.employeeId, $event.checked)"> 
+                    </mat-slide-toggle>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination d-flex">
+              <div class="pagination-left">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+              <div class="pagination-right">
+                <div>
+                  <label for="itemsPerPage" class="w-r">Rows Per Page: </label>
+                  <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange($event)" class="page-select">
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="5">5</option>
+                    <option [value]="7">7</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>         
+    </div>
+</div>

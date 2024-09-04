@@ -1,0 +1,53 @@
+<section class="user-login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-form-container">
+                    <img src="../../../assets/images/meetingplus-logo.svg" alt="Logo" class="ntspl-logo">
+                    <form (submit)="verifyOTP()">
+                        <div class="text">
+                            <h4>Welcome to Meeting Plus</h4>
+                            <p>Check your email for OTP</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="email-group">
+                                <label class="mb-1">Enter Your 6 Digit OTP<span>*</span></label>
+                                 <div class="pincode">
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp1" name="otp1" maxlength="1" (input)="moveFocus($event, 'otp2')">
+                                    </div>
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp2" name="otp2" maxlength="1" (input)="moveFocus($event, 'otp3')">
+                                    </div>
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp3" name="otp3" maxlength="1" (input)="moveFocus($event, 'otp4')">
+                                    </div>
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp4" name="otp4" maxlength="1" (input)="moveFocus($event, 'otp5')">
+                                    </div>
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp5" name="otp5" maxlength="1" (input)="moveFocus($event, 'otp6')">
+                                    </div>
+                                    <div class="digit">
+                                        <input type="text" [(ngModel)]="otp6" name="otp6" maxlength="1" (input)="moveFocus($event, 'otp7')">
+                                    </div>
+                                 </div>             
+                            </div>
+                        </div>
+                        <button class="signin-btn btn" type="submit">Verify</button>
+                        <div class="back-resend back-arrow">
+                            <a routerLink="/">
+                                <div class="back">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b77e8" class="bi bi-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path></svg>
+                                    <span>Back to Sign In</span>
+                                </div>
+                            </a>
+                            <button type="button" (click)="resendOTP()" class="resend-btn">Resend OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

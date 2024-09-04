@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+a{
+    text-decoration: none !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mdc-switch:enabled .mdc-switch__track::after, .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after {
+    background: #38a4f1 !important;
+}
+.ngx-pagination .current {
+    background: #182a91 !important;
+}

@@ -1,0 +1,315 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    height: 111px;
+    background-color: #fff;
+}
+.top-header{
+    border-bottom: 1px solid #d8d9e1;
+    padding: 10px 40px;
+}
+.meeting-btn{
+    background: linear-gradient(to right, rgba(248, 80, 50, 1) 0%, rgba(240, 47, 23, 1) 0%, rgba(107, 217, 74, 1) 0%, rgba(6, 138, 52, 1) 99%, rgba(6, 138, 52, 1) 100%);
+    color: #fff;
+    display: inline-block;
+    padding: 8px 24px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 18px;
+    line-height: 32px;
+}
+.notification .bi{
+    font-size: 30px;
+}
+.bi{
+    font-size: 25px;
+    color: #000;
+}
+h1{
+    margin: 0;
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 400;
+}
+.profile-image{
+    width: 50px;
+    border-radius: 50%;
+    height: 100%;
+}
+.profile-name{
+    font-weight: 500;
+}
+.notification{
+    border-left: 2px solid #d8d9e1;
+    padding-left: 26px;
+    position: relative;
+}
+.notification-count{
+    background: #f63f0d;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.header-menu .nav-item a{
+    padding: 0 20px;
+}
+.header-menu .nav-item{
+    padding: 10px 0;
+}
+.border-right{
+    border-right: 1px solid #d8d9e1;
+}
+.menu-label{
+    font-size: 17px;
+    color: #000;
+}
+.header-menu{
+    box-shadow: 2px 3px 8px 1px rgba(216, 217, 225, 1);
+}
+.header-menu.changeColor {
+  /* display: none; */
+  background: #a6aad3;
+}
+.nav-link{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.navbar-nav{
+    margin-left: 18px !important;
+}
+.meeting-container{
+    padding: 113px 0 0 0px;
+    height: 100vh;
+    position: relative;
+    background-color: #e2e6f1;
+}
+.table-container{
+    background: #fff;
+    border-radius: 10px;
+}
+h2{
+    font-size: 21px;
+    line-height: 32px;
+    margin: 10px 0;
+}
+th{
+    color: #182a91 !important;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+}
+span.date-label{
+    color: #878586;
+    font-size: 15px;
+    line-height: 26px;
+}
+tr td{
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.meeting-btn {
+    padding: 0 10px;
+    border: 0;
+    font-size: 15px;
+    line-height: 30px;
+    background: #d3e2f3;
+    border-radius: 5px;
+}
+.mr-1{
+    margin-right: 5px;
+}
+.h5{
+    margin-bottom: 30px;
+    color: #363a4f;
+}
+.name{
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 34px;
+    display: inline-table;
+}
+.search-bar input[type=search] {
+    border: 1px solid #35299a;
+    width: 100%;
+    height: 35px;
+    background: url(/assets/images/search.png) 30px transparent no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    padding-left: 10px;
+    border-radius: 30px;
+}
+.search-bar{
+    width: 170px;
+}
+::placeholder{
+    font-weight: 400;
+}
+button.btn-filter{
+    background: linear-gradient(to right, rgba(35, 54, 181, 1) 0%, rgba(173, 141, 222, 1) 45%, rgba(173, 141, 222, 1) 100%);
+    color: #fff;
+    border: 0;
+    padding: 8px 17px;
+    border-radius: 30px;
+    height: 45px;
+    font-size: 19px;
+}
+.table-container span{
+    margin-left: 4px;
+    line-height: 30px;
+    color: #1c3183;
+}
+.Mom-btn {
+    color: #fff;
+    border-radius: 40px;
+    padding: 8px 13px;
+    background: #3cde1b;
+    background: linear-gradient(117deg, #3cde1bcc, #126901a7);
+    border: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.Mom-btn p{
+    margin: 0 !important;
+}
+
+.admin-box {
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+}
+.admin-box span{
+    font-size: 16px;
+}
+.gap-3{
+    gap: 15px;
+}
+ .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+} 
+.table th {
+ background-color: #fff;
+}
+.meeting-table{
+    background-color: #e2e6f1;
+    float: left;
+    width: 100%;
+    padding: 40px;
+}
+.meeting-container .ngx-pagination .current {
+    background: #0202bb !important;
+}
+.meeting-container ul.ngx-pagination{
+    padding: 0 !important;
+}
+.tbl-text-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-box {
+    border-radius: 18px;
+    border: 1px solid #4f2cc8;
+    outline: none;
+    padding: 8px 17px;
+    margin-bottom: 20px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    width: 162px;
+    text-indent: 5px;
+    padding: 0;
+    border-radius: 5px;
+}
+.pagination{
+    justify-content: space-between;
+}
+.add-employee-form label span{
+    color: red;
+}
+.add-employee-form label{
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+::placeholder, select option{
+    font-size: 15px;
+}
+.save, .logout-btn {
+    color: #fff;
+    background: #0d37b4;
+    background: linear-gradient(117deg, #0d37b4, #763cd1 59%);
+    border-radius: 40px;
+    padding: 8px 20px;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.logout-btn{
+    margin-left: 10px;
+}
+.save p{
+    margin: 0 !important;
+}
+td span {
+    display: block;
+    color: #747171;
+    font-size: 12px;
+    margin: 0;
+    line-height: 14px;
+}
+.w-r{
+    margin-right: 10px;
+}
+.page-select{
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 35px;
+}
+.status{
+    font-size: 15px !important;
+}
+.error-message p{
+    color: red;
+    margin: 5px 0 0 5px;
+}

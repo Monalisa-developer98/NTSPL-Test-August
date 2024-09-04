@@ -1,0 +1,66 @@
+.user-login{
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+.ntspl-logo{
+    width: 300px;
+}
+.container{
+    padding: 50px 0;
+}
+svg{
+    overflow: hidden;
+    vertical-align: middle;
+}
+p{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+h4{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.form-group span{
+    color: red;
+}
+.signin-btn{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #5522b2;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.inner-group{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(202,183, 221);
+    padding: 0 14px;
+    border-radius: 5px;
+    height: 40px;
+}
+label{
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+}
+form{
+    margin-top: 60px;
+}
+.form-group input{
+    width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-indent: 10px;
+    font-size: 15px;
+}
+.error-message p{
+    color: #e72121;
+    padding: 5px 0 0 11px;
+}   
